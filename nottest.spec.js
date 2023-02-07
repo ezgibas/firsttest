@@ -1,4 +1,4 @@
-const {Builder} = require('selenium-webdriver');
+const {By, Builder} = require('selenium-webdriver');
 const {suite} = require('selenium-webdriver/testing');
 const chrome = require('selenium-webdriver/chrome');
 
@@ -7,17 +7,18 @@ suite(function (env) {
     let driver;
 
     before(async function () {
-      let options = new chrome.Options();
+      //let options = new chrome.Options();
       driver = await new Builder()
-        .setChromeOptions(options)
+        //.setChromeOptions(options)
         .forBrowser('chrome')
         .build();
     });
 
-    after(() => driver.quit());
+    after(async () => await driver.quit());
 
     it('Basic Chrome test', async function () {
       await driver.get('https://www.google.com');
+    
     });
 
   });
