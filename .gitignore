@@ -1,3 +1,13 @@
+### MANUALLY ADDED ###
+
+# Login Information
+login_info.txt
+
+
+
+
+### AUTOMATIC STUFF ###
+
 # Logs
 logs
 *.log
